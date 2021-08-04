@@ -1,0 +1,30 @@
+{
+  "name": "xiaofuyesnew.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:xiaofuyesnew/xiaofuyesnew.github.io.git",
+  "author": "xiaofuyesnew <xiaofuyesnew@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.3.0",
+    "@vue/compiler-sfc": "^3.1.5",
+    "sass": "^1.37.4",
+    "vite": "^2.4.4",
+    "vite-plugin-style-import": "^1.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "element-plus": "^1.0.2-beta.66",
+    "github-markdown-css": "^4.0.0",
+    "highlight.js": "^11.2.0",
+    "marked": "^2.1.3",
+    "vue": "^3.1.5",
+    "vue-router": "^4.0.10",
+    "vuex": "^4.0.2"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "md:tree": "node fold.js"
+  }
+}
