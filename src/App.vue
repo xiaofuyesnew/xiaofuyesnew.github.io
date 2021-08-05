@@ -39,18 +39,11 @@
     justify-content: center;
   }
 }
+
+a {
+  color: #666;
+}
 </style>
 
 <script setup>
-import { useStore } from "vuex";
-import axios from 'axios'
-const { state, commit } = useStore()
-
-axios({
-  url: '/md/tree.json'
-}).then(res => {
-  const { data } = res
-  console.log(data)
-  commit('setMd', { md: data })
-})
 </script>
