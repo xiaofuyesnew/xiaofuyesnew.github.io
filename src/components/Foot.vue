@@ -1,17 +1,23 @@
 <template>
   <div class="foot-box">
-    <a class="icp-link" href="https://beian.miit.gov.cn/">鄂 ICP 备 20000157 号 - 1</a>
-    <div class="spot">·</div>
+    <div class="copyright">Copyright © 2021 xiaofuyesnew. All Rights Reserved. </div>
+    <div class="spot"></div>
+    <a class="icp-link" href="https://beian.miit.gov.cn/">鄂ICP备 20000157号-1</a>
+    <div class="spot"></div>
     <a
       class="police-link"
       href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011502001172"
-    >
-      <img class="police" src="/images/police_icon.png" />鄂公网安备 42011502001172号
-    </a>
+    >鄂公网安备 42011502001172号</a>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.spot {
+  &::before {
+    content: '|';
+  }
+}
+
 a {
   display: flex;
   align-items: center;
@@ -21,7 +27,7 @@ a {
   }
 
   &:visited {
-    color: #666;
+    color: #999;
   }
 }
 
@@ -35,7 +41,7 @@ a {
   align-items: center;
   justify-content: center;
   font-size: 12px;
-  color: #666;
+  color: #999;
 }
 
 .police-link {
