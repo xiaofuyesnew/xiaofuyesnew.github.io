@@ -39,6 +39,10 @@
     justify-content: center;
   }
 }
+
+a {
+  color: #666;
+}
 </style>
 
 <script setup>
