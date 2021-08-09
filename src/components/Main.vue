@@ -32,7 +32,6 @@
 <script setup>
 import Head from './Head.vue'
 import Foot from './Foot.vue'
-import { defineProps } from 'vue'
 
 defineProps({
   header: {
