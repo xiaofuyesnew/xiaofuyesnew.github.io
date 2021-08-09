@@ -22,6 +22,7 @@ a {
   display: flex;
   align-items: center;
   text-decoration: none;
+  color: #999;
   &:hover {
     text-decoration: underline;
   }

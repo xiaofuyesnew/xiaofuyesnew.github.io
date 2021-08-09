@@ -32,6 +32,12 @@
   padding: 20px 0;
 }
 
+.el-footer {
+  display: flex;
+  align-items: center;
+  height: 32px!important;
+}
+
 .markdown-body {
   p {
     display: flex;
@@ -40,9 +46,6 @@
   }
 }
 
-a {
-  color: #666;
-}
 </style>
 
 <script setup>
