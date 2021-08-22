@@ -7,6 +7,11 @@ export default createRouter({
       name: 'Index',
       path: '/',
       component: () => import('../views/Index.vue')
+    },
+    {
+      name: 'About',
+      path: '/about',
+      component: () => import('../views/About.vue')
     }
   ]
 })

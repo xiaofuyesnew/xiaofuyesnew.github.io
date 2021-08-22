@@ -22,6 +22,7 @@ a {
   display: flex;
   align-items: center;
   text-decoration: none;
+  color: #999;
   &:hover {
     text-decoration: underline;
   }
@@ -42,6 +43,7 @@ a {
   justify-content: center;
   font-size: 12px;
   color: #999;
+  font-weight: bold;
 }
 
 .police-link {
