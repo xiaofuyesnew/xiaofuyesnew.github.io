@@ -10,33 +10,16 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow: hidden;
+}
+
 #app {
   width: 100vw;
   min-width: 800px;
   height: 100vh;
   overflow: hidden;
   color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.el-container {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
-
-.el-aside {
-  padding: 20px 0;
-}
-
-.el-footer {
-  display: flex;
-  align-items: center;
-  height: 32px!important;
 }
 
 .markdown-body {

@@ -43,6 +43,7 @@ a {
   justify-content: center;
   font-size: 12px;
   color: #999;
+  font-weight: bold;
 }
 
 .police-link {
