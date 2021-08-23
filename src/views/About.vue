@@ -1,5 +1,7 @@
 <template>
-  <Main :aside="false">About Me</Main>
+  <Main :aside="false">
+    About Me
+  </Main>
 </template>
 
 <style scoped>
