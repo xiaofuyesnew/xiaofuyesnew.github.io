@@ -13,7 +13,7 @@
     "vite-plugin-style-import": "^1.1.0"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "element-plus": "^1.0.2-beta.66",
     "github-markdown-css": "^4.0.0",
     "highlight.js": "^11.2.0",
