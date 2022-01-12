@@ -30,7 +30,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
       - name: deploy cloudbase
-        run: tcb login --apiKeyId ${{ secrets.CLOUDBASE_ID }} --apiKey ${{ secrets.CLOUDBASE_KEY }} && tcb hosting dist -e ${{ secrets.ENV_ID }}
+        run: tcb login --apiKeyId ${{ secrets.CLOUDBASE_ID }} --apiKey ${{ secrets.CLOUDBASE_KEY }} && tcb hosting deploy dist -e ${{ secrets.ENV_ID }}
 
       # - name: Install SSH Key
       #   uses: shimataro/ssh-key-action@v2
