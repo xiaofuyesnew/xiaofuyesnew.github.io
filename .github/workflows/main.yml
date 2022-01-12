@@ -2,7 +2,7 @@ name: CI
 
 on:
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs:
   deploy_blog:
@@ -10,43 +10,35 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Setup node.js
-        uses: actions/setup-node@v1
+      - uses: pnpm/action-setup@v2.0.1
         with:
-          node-version: '14'
-
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        id: yarn-cache
+          version: 6.25.1
+      - name: setup node.js
+        uses: actions/setup-node@v2
         with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: ${{ runner.os }}-yarn-
-
-      - name: Install dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn --frozen-lockfile
-
-      - name: Build Sites
-        run: yarn build
-
-      - name: Deploy pages
+          node-version: 'lts/*'
+          cache: 'pnpm'
+      - name: install dependencies
+        run: pnpm install
+      - name: build
+        run: pnpm build
+      - name: deploy github pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: pages
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
+      - name: deploy cloudbase
+        run: pnpm exec tcb login --apiKeyId ${{ secrets.CLOUDBASE_ID }} --apiKey ${{ secrets.CLOUDBASE_KEY }} && pnpm exec tcb hosting /home/runner/work/xiaofuyesnew.github.io/xiaofuyesnew.github.io/dist -e ${{ secrets.ENV_ID }}
 
-      - name: Install SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.REMOTE_SSH_KEY }}
-          known_hosts: "just-a-placeholder-so-we-don't-get-errors"
-          # known_hosts: ${{ secrets.KNOWN_HOSTS }}
-      - name: Adding Known Hosts
-        run: ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
-      - name: Deploy to Server
-        run: rsync -avz --delete /home/runner/work/xiaofuyesnew.github.io/xiaofuyesnew.github.io/dist/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.REMOTE_TARGET }}
+      # - name: Install SSH Key
+      #   uses: shimataro/ssh-key-action@v2
+      #   with:
+      #     key: ${{ secrets.REMOTE_SSH_KEY }}
+      #     known_hosts: "just-a-placeholder-so-we-don't-get-errors"
+      #     # known_hosts: ${{ secrets.KNOWN_HOSTS }}
+      # - name: Adding Known Hosts
+      #   run: ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
+      # - name: Deploy to Server
+      #   run: rsync -avz --delete /home/runner/work/xiaofuyesnew.github.io/xiaofuyesnew.github.io/dist/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.REMOTE_TARGET }}
