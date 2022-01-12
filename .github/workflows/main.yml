@@ -19,7 +19,7 @@ jobs:
           node-version: 'lts/*'
           cache: 'pnpm'
       - name: install dependencies
-        run: pnpm install && npm install @cloudbase/cli -g
+        run: pnpm install
       - name: build
         run: pnpm build
       - name: deploy github pages
@@ -30,15 +30,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
       - name: deploy cloudbase
-        run: tcb login --apiKeyId ${{ secrets.CLOUDBASE_ID }} --apiKey ${{ secrets.CLOUDBASE_KEY }} && tcb hosting deploy dist -e ${{ secrets.ENV_ID }}
-
-      # - name: Install SSH Key
-      #   uses: shimataro/ssh-key-action@v2
-      #   with:
-      #     key: ${{ secrets.REMOTE_SSH_KEY }}
-      #     known_hosts: "just-a-placeholder-so-we-don't-get-errors"
-      #     # known_hosts: ${{ secrets.KNOWN_HOSTS }}
-      # - name: Adding Known Hosts
-      #   run: ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
-      # - name: Deploy to Server
-      #   run: rsync -avz --delete /home/runner/work/xiaofuyesnew.github.io/xiaofuyesnew.github.io/dist/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.REMOTE_TARGET }}
+        run: |
+          npm install @cloudbase/cli -g
+          tcb login --apiKeyId ${{ secrets.CLOUDBASE_ID }} --apiKey ${{ secrets.CLOUDBASE_KEY }}
+          tcb hosting deploy dist -e ${{ secrets.ENV_ID }}

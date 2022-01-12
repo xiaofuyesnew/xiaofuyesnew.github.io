@@ -1,6 +1,6 @@
 <template>
   <div class="foot-box">
-    <div class="copyright">Copyright © 2021 xiaofuyesnew. All Rights Reserved.</div>
+    <div class="copyright">Copyright © 2021-present xiaofuyesnew. All Rights Reserved.</div>
     <div class="spot"></div>
     <a class="icp-link" href="https://beian.miit.gov.cn/">鄂ICP备 20000157号-1</a>
     <div class="spot"></div>
