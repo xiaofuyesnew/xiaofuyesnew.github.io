@@ -1,10 +1,5 @@
-
-
-
 const Layout = ({ children }) => {
-  return (
-    <>
-      
-    </>
-  )
+  return <>{children}</>
 }
+
+export default Layout
