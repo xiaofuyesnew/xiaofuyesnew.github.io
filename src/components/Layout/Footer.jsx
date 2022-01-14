@@ -4,7 +4,7 @@ const Footer = () => {
       <span>Copyright © 2021-present</span>
       <span className="px-2">|</span>
       <span>
-        Created by <a className="hover:underline" href="https://github.com/xiaofuyesnew">🧙‍♂️xiaofuyesnew</a>
+        Created by <a className="hover:underline" href="https://github.com/xiaofuyesnew">🧙‍♂️ xiaofuyesnew</a>
       </span>
       <span className="px-2">|</span>
       <a className="hover:underline" href="https://beian.miit.gov.cn/">

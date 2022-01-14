@@ -3,7 +3,9 @@ import Layout from '../components/Layout'
 const Index = () => {
   return (
     <Layout>
-      <div className='container h-full max-w-[800px]'></div>
+      <div className='w-full max-w-[800px] h-full m-auto'>
+        
+      </div>
     </Layout>
   )
 }

@@ -19,13 +19,13 @@ const Header = () => {
           className="hover:underline ml-5"
           href="https://github.com/xiaofuyesnew/xiaofuyesnew.github.io"
         >
-          <Github className="w-5 h-5 fill-slate-900 dark:fill-slate-500" />
+          <Github className="w-5 h-5 fill-slate-500" />
         </a>
         <button onClick={toggleTheme} title={state.mode === 'dark' ? 'light mode' : 'dark mode'}>
           {state.mode === 'dark' ? (
             <SunIcon className="w-5 h-5 stroke-slate-500" />
           ) : (
-            <MoonIcon className="w-5 h-5 stroke-slate-900" />
+            <MoonIcon className="w-5 h-5 stroke-slate-500" />
           )}
         </button>
       </div>
