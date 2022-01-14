@@ -33,6 +33,5 @@ jobs:
         run: |
           npm install @cloudbase/cli -g
           tcb login --apiKeyId ${{ secrets.CLOUDBASE_ID }} --apiKey ${{ secrets.CLOUDBASE_KEY }}
-          tcb hosting delete -e ${{ secrets.ENV_ID }}
-          y
+          tcb hosting delete / -e ${{ secrets.ENV_ID }}
           tcb hosting deploy dist -e ${{ secrets.ENV_ID }}
