@@ -1,19 +1,19 @@
 import { createContext, useReducer } from 'react'
 
 const initialState = {
-  mode: 'dark'
+  mode: 'dark',
 }
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'set_theme':
-      if (action.theme === 'dark') {
-        document.documentElement.classList.add('dark')
-      } else {
+    case 'toggle_theme':
+      console.log(state.mode)
+      if (state.mode === 'dark') {
         document.documentElement.classList.remove('dark')
+      } else {
+        document.documentElement.classList.add('dark')
       }
-      
-      return { ...state, mode: action.theme }
+      return { ...state, mode: state.mode === 'dark' ? 'light' : 'dark' }
     default:
       throw new Error(`no such action: ${action.type}`)
   }
