@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 
-import Index from './Admin/Index'
-import List from './Admin/List'
+import Index from '@/Admin/Index'
+import List from '@/Admin/List'
 
 const Admin = () => {
   return (

@@ -1,9 +1,9 @@
 import { HashRouter, Route, Routes } from 'react-router-dom'
 
-import Index from '../views/Index'
-import About from '../views/About'
-import Admin from '../views/Admin'
-import AdminList from '../views/Admin/List'
+import Index from '@/views/Index'
+import About from '@/views/About'
+import Admin from '@/views/Admin'
+import AdminList from '@/views/Admin/List'
 
 const routes = [
   {

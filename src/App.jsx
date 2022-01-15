@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import Provider, { Context } from './components/Store'
-import Router from './router/index'
+import Provider, { Context } from './store'
+import Router from './router'
 
 const App = () => {
   const { state, dispatch } = useContext(Context)
