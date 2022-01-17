@@ -2,6 +2,8 @@ import { useContext } from 'react'
 import Provider, { Context } from './store'
 import Router from './router'
 
+import LoginItem from '@/components/Login/Item'
+
 const App = () => {
   const { state, dispatch } = useContext(Context)
 
@@ -14,6 +16,7 @@ const App = () => {
   return (
     <Provider>
       <Router />
+      <LoginItem />
     </Provider>
   )
 }

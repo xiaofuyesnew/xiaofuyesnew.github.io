@@ -22,12 +22,12 @@ const Header = () => {
         >
           <Github className="w-5 h-5 fill-slate-500 hover:fill-slate-700 dark:hover:fill-slate-300" />
         </a>
-        <a
+        {/* <a
           className="hover:underline ml-5"
           href="https://twitter.com/xiaofuyesnew"
         >
           <Twitter className="w-5 h-5 fill-slate-500 hover:fill-slate-700 dark:hover:fill-slate-300" />
-        </a>
+        </a> */}
         <button
           onClick={toggleTheme}
           title={state.mode === 'dark' ? 'switch to light mode' : 'switch to dark mode'}

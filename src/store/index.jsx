@@ -2,6 +2,10 @@ import { createContext, useReducer } from 'react'
 
 const initialState = {
   mode: 'dark',
+  authInfo: {
+
+  },
+  loginShow: false
 }
 
 const reducer = (state, action) => {
