@@ -4,9 +4,10 @@ import { MoonIcon, SunIcon } from '@heroicons/react/outline'
 import { Context } from '@/store'
 import Github from '@/components/Icons/Github'
 import Twitter from '@/components/Icons/Twitter'
+import LoginIcon from '@/components/Login/Icon'
 
 const Header = () => {
-  const [state, dispatch] = useContext(Context)
+  const [ state, dispatch ] = useContext(Context)
 
   const toggleTheme = () => {
     dispatch({ type: 'toggle_theme' })
@@ -16,6 +17,7 @@ const Header = () => {
     <header className="w-full px-10 py-2 flex items-center justify-between relative z-10">
       <img className="h-8" src="/images/logo.svg" alt="logo" />
       <div className="flex items-center flex-row-reverse">
+        <LoginIcon />
         <a
           className="hover:underline ml-5"
           href="https://github.com/xiaofuyesnew/xiaofuyesnew.github.io"
@@ -30,7 +32,11 @@ const Header = () => {
         </a> */}
         <button
           onClick={toggleTheme}
-          title={state.mode === 'dark' ? 'switch to light mode' : 'switch to dark mode'}
+          title={
+            state.mode === 'dark'
+              ? 'switch to light mode'
+              : 'switch to dark mode'
+          }
         >
           {state.mode === 'dark' ? (
             <MoonIcon className="w-5 h-5 stroke-sky-500 fill-sky-500/20 hover:stroke-sky-300" />

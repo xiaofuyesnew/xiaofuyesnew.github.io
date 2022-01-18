@@ -14,7 +14,7 @@ const auth = tcb.auth({ persistence: 'session' })
 const login = async () => {
   await auth.anonymousAuthProvider().signIn()
   const loginState = await auth.hasLoginState()
-  console.log(loginState)
+  // console.log(loginState)
 }
 
 login()

@@ -1,20 +1,19 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
+import Provider, { Context } from '@/store/index'
 
 import Mask from '../Mask'
 
-import { Context } from '@/store'
-
 const Item = () => {
-  const { state, dispatch } = useContext(Context)
+  const [ state, dispatch ] = useContext(Context)
 
-  console.log(state)
   const clickMask = (e) => {
     console.log(e)
+    dispatch({ type: 'toggle_login' })
   }
 
   return state.loginShow ? (
-    <Mask onClick={clickMask}>
-      <div className="w-[100px] h-[100px] bg-white"></div>
+    <Mask>
+      <div className="w-[100px] h-[100px] bg-white" onClick={clickMask}></div>
     </Mask>
   ) : null
 }
