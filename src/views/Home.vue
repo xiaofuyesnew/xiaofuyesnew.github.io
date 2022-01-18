@@ -1,9 +1,11 @@
 <template>
-  <div>it's home</div>
+  <layout>
+    <router-view></router-view>
+  </layout>
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import layout from '../components/Layout.vue';
 
 
 </script>
