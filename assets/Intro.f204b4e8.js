@@ -1,0 +1,1 @@
+import{_ as e}from"./index.e1e993a3.js";import{o as t,g as s,h as o}from"./vendor.62ad4584.js";const c={},r={class:"max-w-[800px] h-full mx-auto pt-12 flex items-center justify-center"},a=o("div",{class:"w-full"},null,-1),n=[a];function _(l,d){return t(),s("div",r,n)}var m=e(c,[["render",_]]);export{m as default};

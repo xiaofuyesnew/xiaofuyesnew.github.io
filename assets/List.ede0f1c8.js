@@ -1,0 +1,1 @@
+import{_ as e}from"./index.e1e993a3.js";import{o as r,g as n}from"./vendor.62ad4584.js";const o={};function t(a,s){return r(),n("div",null,"admin-list")}var _=e(o,[["render",t]]);export{_ as default};
