@@ -12,23 +12,21 @@ const updateCode = () => {
   if (!state.auth.code) {
     const key = `${new Date().getTime()}${Math.random().toFixed(4).split('.')[1]}`
     state.auth.app.callFunction({
-      name: 'get_code',
-      data: {
-        key
-      }
+      name: 'get_code'
     }).then(res => {
       // console.log(res)
+      const { url: code, key, fileID: codeID } = res.result
 
       localStorage.setItem('code_info', JSON.stringify({
-        code: res.result.url,
+        code,
         key,
-        codeID: res.result.fileID
+        codeID
       }))
 
       commit('update_code', {
-        code: res.result.url,
+        code,
         key,
-        codeID: res.result.fileID
+        codeID
       })
     })
   }
