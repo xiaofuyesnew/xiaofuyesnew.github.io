@@ -1,7 +1,7 @@
 const global = {
   state: {
     mode: 'dark',
-    mask: true,
+    mask: false,
   },
   mutations: {
     toggle_mode: (state, payload) => {

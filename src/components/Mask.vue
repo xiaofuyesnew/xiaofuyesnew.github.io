@@ -5,7 +5,6 @@
 </template>
 
 <script setup>
-import { reactive, computed } from 'vue'
 import { useStore } from 'vuex'
 const { state } = useStore()
 </script>

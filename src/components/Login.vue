@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-full flex items-center justify-center">
+  <div class="w-full h-full flex items-center justify-center relative">
     <div class="w-80 h-96 bg-white flex flex-col">
       <div
         class="w-full h-10 border border-solid border-gray-100 flex items-center justify-between"
@@ -35,6 +35,10 @@
         </div>
       </div>
     </div>
+    <div
+      class="w-6 h-6 absolute bg-white/50 hover:bg-white/70 top-[calc(50%+14rem)] left-[50%] translate-x-[-50%] rounded-full cursor-pointer before:w-px before:h-4 before:bg-white before:absolute before:translate-x-[-50%] before:translate-y-[-50%] before:top-[50%] before:left-[50%] before:rotate-45 after:w-px after:h-4 after:bg-white after:absolute after:translate-x-[-50%] after:translate-y-[-50%] after:top-[50%] after:left-[50%] after:-rotate-45"
+      @click="commit('toggle_mask')"
+    ></div>
   </div>
   <!-- <button class="h-[60px] bg-white flex items-center justify-center px-2" @click="updateCode">获取小程序码</button>
   <img :src="state.auth.code" v-if="state.auth.code" crossorigin="anonymous" />
@@ -90,7 +94,7 @@ const checkKey = () => {
           }
         }).then(res => {
           console.log(res)
-          const {key, state} = res.result
+          const { key, state } = res.result
           if (state) {
             console.log('login success')
           } else {
