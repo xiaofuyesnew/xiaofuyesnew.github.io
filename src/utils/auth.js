@@ -39,7 +39,7 @@ export const getCode = () => {
   if (codeInfo) {
     const codeData = JSON.parse(codeInfo)
     app.getTempFileURL({ fileList: [codeData.codeID] }).then(res => {
-      // console.log(res)
+      console.log(res)
       if (res.fileList[0].code === 'SUCCESS') {
         commit('update_code', JSON.parse(codeInfo))
       } else {
