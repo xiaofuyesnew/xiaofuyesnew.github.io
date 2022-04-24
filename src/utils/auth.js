@@ -1,7 +1,9 @@
 import Store from '@/store'
 import cloud from '@cloudbase/js-sdk'
 
-const { commit } = Store
+const {
+  commit
+} = Store
 
 const app = cloud.init({
   env: 'openchet-6n8um',
@@ -14,6 +16,7 @@ const auth = app.auth({
 const loginState = auth.hasLoginState()
 
 export const login = () => {
+  // console.log(loginState)
   if (loginState) {
     commit('update_cloud', {
       app,
@@ -34,17 +37,35 @@ export const login = () => {
   }
 }
 
+const generateCode = () => {
+  return app.callFunction({
+    name: 'get_code',
+  })
+}
+
 export const getCode = () => {
   const codeInfo = localStorage.getItem('code_info')
   if (codeInfo) {
     const codeData = JSON.parse(codeInfo)
-    app.getTempFileURL({ fileList: [codeData.codeID] }).then(res => {
+    console.log(codeData)
+    app.getTempFileURL({
+      fileList: [codeData.fileID]
+    }).then(res => {
       console.log(res)
       if (res.fileList[0].code === 'SUCCESS') {
         commit('update_code', JSON.parse(codeInfo))
       } else {
         localStorage.removeItem('code_info')
+        generateCode().then(res => {
+          localStorage.setItem('code_info', JSON.stringify(res.result))
+          commit('update_code', res.result)
+        })
       }
+    })
+  } else {
+    generateCode().then(res => {
+      localStorage.setItem('code_info', JSON.stringify(res.result))
+      commit('update_code', res.result)
     })
   }
 }

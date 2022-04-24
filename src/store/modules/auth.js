@@ -6,7 +6,7 @@ const auth = {
       loginState: null,
       code: '',
       key: '',
-      codeID: ''
+      fileID: ''
     }
   },
   mutations: {
