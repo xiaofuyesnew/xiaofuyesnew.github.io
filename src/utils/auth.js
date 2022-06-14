@@ -1,9 +1,9 @@
-import Store from '@/store'
+import store from '@/store'
 import cloud from '@cloudbase/js-sdk'
 
 const {
   commit
-} = Store
+} = store
 
 const app = cloud.init({
   env: 'openchet-6n8um',
@@ -13,10 +13,11 @@ const auth = app.auth({
   persistence: 'session',
 })
 
-const loginState = auth.hasLoginState()
+// const loginState = auth.hasLoginState()
 
-export const login = () => {
-  // console.log(loginState)
+export const login = async () => {
+  const loginState = await auth.hasLoginState()
+  console.log(loginState)
   if (loginState) {
     commit('update_cloud', {
       app,
@@ -51,7 +52,7 @@ export const getCode = () => {
     app.getTempFileURL({
       fileList: [codeData.fileID]
     }).then(res => {
-      console.log(res)
+      // console.log(res)
       if (res.fileList[0].code === 'SUCCESS') {
         commit('update_code', JSON.parse(codeInfo))
       } else {

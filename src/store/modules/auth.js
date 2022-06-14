@@ -6,7 +6,8 @@ const auth = {
       loginState: null,
       code: '',
       key: '',
-      fileID: ''
+      fileID: '',
+
     }
   },
   mutations: {
@@ -18,10 +19,10 @@ const auth = {
       state.loginState = loginState
     },
     update_code: (state, payload) => {
-      const {code, key, codeID} = payload
+      const {code, key, fileID} = payload
       state.code = code
       state.key = key
-      state.codeID = codeID
+      state.fileID = fileID
     }
   },
 }
