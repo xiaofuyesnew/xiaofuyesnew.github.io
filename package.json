@@ -1,28 +1,19 @@
 {
   "name": "xiaofuyesnew.github.io",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "repository": "git@github.com:xiaofuyesnew/xiaofuyesnew.github.io.git",
-  "author": "xiaofuyesnew <xiaofuyesnew@qq.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.1",
-    "autoprefixer": "^10.4.5",
-    "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.24",
-    "vite": "^2.9.5"
-  },
-  "dependencies": {
-    "@cloudbase/js-sdk": "^1.7.2",
-    "@heroicons/vue": "^1.0.6",
-    "axios": "^0.24.0",
-    "vue": "^3.2.33",
-    "vue-router": "^4.0.14",
-    "vuex": "^4.0.2"
-  },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@algolia/client-search": "^4.14.3",
+    "vitepress": "1.0.0-alpha.38",
+    "vue": "^3.2.45"
   }
 }
