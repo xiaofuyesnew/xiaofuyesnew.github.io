@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "gen": "npx prisma generate",
-    "migrate:dev": "dotenv -e .env.local -- npx prisma db push"
+    "migrate:dev": "dotenv -e .env.local -- npx prisma db push",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "dayjs": "^1.11.7"
   },
   "devDependencies": {
-    "dotenv-cli": "^7.0.0"
+    "dotenv-cli": "^7.0.0",
+    "prisma": "^4.10.1"
   }
 }
