@@ -5,4 +5,4 @@ import timezone from 'dayjs/plugin/timezone.js'
 dayjs.extend(utc)
 dayjs.extend(timezone)
 
-export default dayjs
+export default (date) => dayjs(date).tz('Asia/Shanghai')
