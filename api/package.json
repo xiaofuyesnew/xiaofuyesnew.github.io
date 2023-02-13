@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "migrate:dev": "dotenv -e .env.local -- npx prisma db push",
+    "db:push": "dotenv -e .env.local -- npx prisma db push",
     "postinstall": "prisma generate"
   },
   "keywords": [],

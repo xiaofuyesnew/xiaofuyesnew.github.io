@@ -1,3 +1,6 @@
-# Rename this file to .env.local and uncomment fllowing line: this bring an environment variable DATABASE_URL for using with pscale cli to push database schema to planetscale under development.
+# Rename this file to .env.local
+# change <database name> to real one
+# this bring an environment variable DATABASE_URL for using with pscale cli to push database schema to planetscale under development.
+# use pscale cli: pscale connect <database name> <branch name> --port 3309
 
-# DATABASE_URL='mysql://root@127.0.0.1:3309/tutorial'
+DATABASE_URL='mysql://root@127.0.0.1:3309/<database name>'
