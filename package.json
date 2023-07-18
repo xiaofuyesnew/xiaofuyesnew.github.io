@@ -1,10 +1,67 @@
 {
   "name": "xiaofuyesnew.github.io",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.0.1",
+  "description": "My blog system",
+  "keywords": [
+    "blog",
+    "fullstack",
+    "framework"
+  ],
+  "author": {
+    "name": "Allen Wong",
+    "email": "xiaofuyesnew@qq.com",
+    "url": "https://xiaofuyesnew.github.io"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaofuyesnew/xiaofuyesnew.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xiaofuyesnew/xiaofuyesnew.github.io/issues"
+  },
+  "homepage": "https://github.com/xiaofuyesnew/xiaofuyesnew.github.io",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.6.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --mode staging",
+    "lint": "npx eslint --ext .js,.vue --fix src"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@iconify/vue": "^4.1.1",
+    "axios": "^1.4.0",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.9",
+    "pinia": "^2.1.4",
+    "qs": "^6.11.2",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.2.91",
+    "@vitejs/plugin-legacy": "^4.1.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.45.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "postcss": "^8.4.26",
+    "sass": "^1.63.6",
+    "tailwindcss": "^3.3.3",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-icons": "^0.16.5",
+    "unplugin-imagemin": "^0.3.13",
+    "unplugin-vue-components": "^0.25.1",
+    "vite": "^4.4.4",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-mkcert": "^1.16.0",
+    "vite-plugin-obfuscator": "^1.0.5",
+    "vite-plugin-svg-icons": "^2.0.1"
+  }
 }
