@@ -29,3 +29,4 @@ pnpm-debug.log*
 
 .eslintrc-auto-import.json
 vite.config.mjs.timestamp*
+.vercel
