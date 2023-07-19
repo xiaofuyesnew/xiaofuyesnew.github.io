@@ -62,7 +62,7 @@ export default [
       {
         path: 'profile',
         name: 'profile',
-        component: () => import('@/views/user/Profile.vue'),
+        component: () => import('@/views/User/Profile.vue'),
         meta: {
           title: '个人信息',
           menu: true,
@@ -72,7 +72,7 @@ export default [
       {
         path: 'settings',
         name: 'settings',
-        component: () => import('@/views/user/Settings.vue'),
+        component: () => import('@/views/User/Settings.vue'),
         meta: {
           title: '个人设置',
           menu: true,

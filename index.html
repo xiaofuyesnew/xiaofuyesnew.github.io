@@ -9,6 +9,11 @@
     content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
   <link rel="icon" type="image/svg+xml" href="/logo.svg" />
   <title><%- title %></title>
+  <script>
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
   <style rel="stylesheet">
     body {
       background-color: #f2f3f5;
@@ -29,6 +34,7 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      background-color: #0a0a0a;
     }
 
     .splash .logo-box {

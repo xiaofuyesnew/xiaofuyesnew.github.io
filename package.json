@@ -32,10 +32,12 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
     "@iconify/vue": "^4.1.1",
     "axios": "^1.4.0",
     "crypto-js": "^4.1.1",
     "dayjs": "^1.11.9",
+    "element-plus": "^2.3.8",
     "pinia": "^2.1.4",
     "qs": "^6.11.2",
     "vue": "^3.3.4",
