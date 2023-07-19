@@ -28,7 +28,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --mode staging",
-    "lint": "npx eslint --ext .js,.vue --fix src"
+    "lint": "npx eslint --ext .js,.vue --fix src",
+    "vercel:login": "npx vercel login",
+    "api:dev": "npx vercel dev"
   },
   "license": "MIT",
   "dependencies": {
