@@ -10,7 +10,7 @@ export const useGlobal = defineStore('global', {
   getters: {},
   actions: {
     setTheme() {
-      this.theme = getStorage('theme')
+      this.theme = getStorage('theme') || 'dark'
     },
     toggleTheme() {
       this.theme = this.theme === 'dark' ? 'light' : 'dark'
