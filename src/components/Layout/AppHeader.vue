@@ -14,11 +14,60 @@
         />
       </div>
     </el-link>
-    <div class="flex">
+    <div class="flex items-center">
+      <div class="h-[80%] flex items-center pr-4 border-0 border-r border-solid border-white">
+        <el-link
+          :underline="false"
+          class="ml-4"
+          href="#/home"
+        >
+          Blog
+        </el-link>
+        <el-link
+          :underline="false"
+          class="ml-4"
+          href="#/thoughts"
+        >
+          Thoughts
+        </el-link>
+        <el-link
+          :underline="false"
+          class="ml-4"
+          href="#/about"
+        >
+          About
+        </el-link>
+      </div>
       <el-link
-        class="ml-4"
+        class="ml-4 opacity-75 hover:opacity-100 transition-all duration-300"
         :underline="false"
-        title="切换暗黑/明亮模式"
+        title="Twitter"
+        href="https://twitter.com/xiaofuyesnew"
+        target="_blank"
+      >
+        <auto-icon
+          class="text-xl"
+          :class="global.theme === 'dark' ? 'text-white' : 'text-black'"
+          name="twitter"
+        />
+      </el-link>
+      <el-link
+        class="ml-4 opacity-75 hover:opacity-100 transition-all duration-300"
+        :underline="false"
+        title="Github"
+        href="https://github.com/xiaofuyesnew/xiaofuyesnew.github.io"
+        target="_blank"
+      >
+        <auto-icon
+          class="text-xl"
+          :class="global.theme === 'dark' ? 'text-white' : 'text-black'"
+          name="github"
+        />
+      </el-link>
+      <el-link
+        class="ml-4 opacity-75 hover:opacity-100 transition-all duration-300"
+        :underline="false"
+        title="暗黑/明亮模式"
         @click="global.toggleTheme()"
       >
         <auto-icon

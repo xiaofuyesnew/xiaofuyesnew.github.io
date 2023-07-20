@@ -9,7 +9,7 @@
         class="w-full h-full flex-1 overflow-y-visible p-0"
       >
         <el-scrollbar
-          view-style="max-width: 800px;width:100%;margin:auto;padding:0 20px"
+          view-style="max-width: 640px;width:100%;margin:auto;padding:20px"
           max-height="100%"
         >
           <component

@@ -1,55 +1,9 @@
 <template>
-  <div class="text-[64px]">
-    home
-  </div>
-  <div class="text-[64px]">
-    home
-  </div>
-  <div class="text-[64px]">
-    home
-  </div>
-  <div class="text-[64px]">
-    home
-  </div>
-  <div class="text-[64px]">
-    home
-  </div>
-  <div class="text-[64px]">
-    home
-  </div>
-  <div class="text-[64px]">
-    home
-  </div>
-  <div class="text-[64px]">
-    home
-  </div>
-  <div class="text-[64px]">
-    home
-  </div>
-  <div class="text-[64px]">
-    home
-  </div>
-  <div class="text-[64px]">
-    home
-  </div>
-  <div class="text-[64px]">
-    home
-  </div>
-  <div class="text-[64px]">
-    home
-  </div>
-  <div class="text-[64px]">
-    home
-  </div>
-  <div class="text-[64px]">
-    home
-  </div>
-  <div class="text-[64px]">
-    home
-  </div>
+  <article-block />
 </template>
 
 <script setup>
+import ArticleBlock from '@/components/Article/Block.vue'
 import axios from 'axios'
 
 axios.get('/api').then(res => {
