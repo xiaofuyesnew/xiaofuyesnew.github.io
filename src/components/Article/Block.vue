@@ -1,6 +1,5 @@
 <template>
   <div
-    v-loading="loading"
     class="w-full min-h-full"
   >
     home
@@ -10,7 +9,6 @@
 <script setup>
 
 // const year = ref('2023')
-const loading = ref(true)
 
 </script>
 

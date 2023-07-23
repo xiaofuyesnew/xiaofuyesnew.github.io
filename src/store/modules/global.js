@@ -4,11 +4,18 @@ import { setStorage, getStorage } from '@/utils'
 export const useGlobal = defineStore('global', {
   state() {
     return {
-      theme: 'dark'
+      theme: 'dark',
+      loading: false
     }
   },
   getters: {},
   actions: {
+    showLoading() {
+      this.loading = true
+    },
+    hideLoading() {
+      this.loading = false
+    },
     setTheme() {
       this.theme = getStorage('theme') || 'dark'
     },

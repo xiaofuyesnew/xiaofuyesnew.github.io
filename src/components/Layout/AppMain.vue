@@ -6,7 +6,7 @@
     >
       <el-main
         :key="route.name"
-        class="w-full h-full flex-1 overflow-y-visible p-0"
+        class="w-full h-full flex-1 overflow-y-visible p-0 relative"
       >
         <el-scrollbar
           view-style="max-width: 640px;width:100%;margin:auto;padding:20px"
@@ -17,7 +17,15 @@
             :key="route.fullPath"
           />
         </el-scrollbar>
+        <loading v-if="global.loading" />
       </el-main>
     </transition>
   </router-view>
 </template>
+
+<script setup>
+import { useGlobal } from '@/store'
+
+const global = useGlobal()
+
+</script>
