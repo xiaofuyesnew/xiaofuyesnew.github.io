@@ -15,4 +15,8 @@ axios.get('/api').then(res => {
   console.log(res)
 })
 
+setTimeout(() => {
+  global.hideLoading()
+}, 2000)
+
 </script>

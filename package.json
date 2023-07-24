@@ -30,7 +30,7 @@
     "preview": "vite preview --mode staging",
     "lint": "npx eslint --ext .js,.vue --fix src",
     "vercel:login": "npx vercel login",
-    "api:dev": "npx vercel dev"
+    "api:dev": "NODE_ENV=development npx vercel dev"
   },
   "license": "MIT",
   "dependencies": {
