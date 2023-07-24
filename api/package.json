@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "db:push": "npx prisma db push",
     "postinstall": "prisma generate"
   },
   "keywords": [],

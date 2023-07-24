@@ -20,10 +20,6 @@
     "url": "https://github.com/xiaofuyesnew/xiaofuyesnew.github.io/issues"
   },
   "homepage": "https://github.com/xiaofuyesnew/xiaofuyesnew.github.io",
-  "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=8.6.0"
-  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
