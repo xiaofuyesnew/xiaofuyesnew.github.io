@@ -30,7 +30,7 @@
     "preview": "vite preview --mode staging",
     "lint": "npx eslint --ext .js,.vue --fix src",
     "vercel:login": "npx vercel login",
-    "api:dev": "NODE_ENV=development npx vercel dev"
+    "api:dev": "cross-env NODE_ENV=development npx vercel dev"
   },
   "license": "MIT",
   "dependencies": {
@@ -50,6 +50,7 @@
     "@vitejs/plugin-legacy": "^4.1.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.14",
+    "cross-env": "^7.0.3",
     "eslint": "^8.45.0",
     "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-vue": "^9.15.1",
