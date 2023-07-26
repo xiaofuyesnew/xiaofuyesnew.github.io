@@ -29,6 +29,20 @@ export default [
     ]
   },
   {
+    path: '/thoughts',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        name: 'thoughts',
+        component: () => import('@/views/Thoughts.vue'),
+        meta: {
+          title: '想法'
+        }
+      }
+    ]
+  },
+  {
     path: '/about',
     component: Layout,
     children: [
@@ -89,29 +103,11 @@ export default [
     },
     children: [
       {
-        path: '404',
-        name: '404',
+        path: ':code',
+        name: 'error',
         component: () => import('@/views/Error.vue'),
         meta: {
-          title: '未找到',
-          menu: false
-        }
-      },
-      {
-        path: '401',
-        name: '401',
-        component: () => import('@/views/Error.vue'),
-        meta: {
-          title: '未授权',
-          menu: false
-        }
-      },
-      {
-        path: '500',
-        name: '500',
-        component: () => import('@/views/Error.vue'),
-        meta: {
-          title: '内部错误',
+          title: '错误',
           menu: false
         }
       }

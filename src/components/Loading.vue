@@ -9,7 +9,7 @@
 
 <style lang="scss" scoped>
 .logo {
-  animation: logo 3s alternate-reverse infinite;
+  animation: logo 1s alternate-reverse infinite;
 }
 
 @keyframes logo {
