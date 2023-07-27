@@ -15,7 +15,7 @@
       </div>
     </el-link>
     <div class="flex items-center">
-      <div class="h-[80%] flex items-center pr-4 border-0 border-r border-solid border-white">
+      <div class="h-[24px] flex items-center pr-4">
         <el-link
           :underline="false"
           class="ml-4"
@@ -65,7 +65,7 @@
         />
       </el-link>
       <el-link
-        class="ml-4 opacity-75 hover:opacity-100 transition-all duration-300"
+        class="mx-4 opacity-75 hover:opacity-100 transition-all duration-300"
         :underline="false"
         title="暗黑/明亮模式"
         @click="global.toggleTheme()"
@@ -76,21 +76,26 @@
           :name="global.theme === 'dark' ? 'ep:moon' : 'ep:sunny'"
         />
       </el-link>
+      <div
+        class="h-[24px] flex items-center justify-center px-4"
+      >
+        <el-avatar
+          :icon="UserFilled"
+          :size="24"
+        />
+      </div>
     </div>
   </el-header>
 </template>
 
 <script setup>
+import { UserFilled } from '@element-plus/icons-vue'
 import { useGlobal } from '@/store'
 
 const global = useGlobal()
 </script>
 
 <style lang="scss" scoped>
-// .color {
-//   color: #37afff;
-// }
-
 .header {
   backdrop-filter: blur(5px);
 }
