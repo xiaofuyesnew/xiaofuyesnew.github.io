@@ -6,6 +6,8 @@
     <h1 class="text-3xl font-bold mb-5">Allen Wong</h1>
     <p class="mb-5">Hi, I am Allen Wong, a full-stack open source coder.🧙‍♂️</p>
     <p class="mb-5">MAY use <span class="text-[#3178C6]" i-simple-icons:typescript /> BUT a <span class="text-[#F7DF1E]" i-simple-icons:javascript /> advocate.</p>
+    <p>Creator of <a href="https://github.com/xiaofuyesnew/vite-phaser" target="_blank">vite-phaser</a></p>
+    <p class="mb-5">Working at <a href="http://www.chinabore.com/" target="_blank">武汉般若互动</a></p>
     <p>Find me on</p>
     <p flex="~ gap-3 wrap" class="pt-2 mb-5">
       <a href="https://github.com/xiaofuyesnew" target="_blank">
