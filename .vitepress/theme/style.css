@@ -137,12 +137,14 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
-.post a {
+.post a,
+.VPFooter .link {
   border-bottom: 0.8px solid rgba(125, 125, 125, 0.3);
   transition: border 0.2s ease-in-out; 
 }
 
-.post a:hover {
+.post a:hover,
+.VPFooter .link:hover {
   border-bottom: 1px solid rgb(187, 187, 187);
 }
 

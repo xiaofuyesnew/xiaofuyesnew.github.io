@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": [
-        "./.vitepress/*"
+      "@": [
+        "/src"
       ]
     }
   },
   "include": [
     ".vitepress/**/*",
+    "src/**/*",
   ],
   "exclude": [
     "node_modules",
