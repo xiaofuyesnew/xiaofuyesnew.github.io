@@ -1,5 +1,3 @@
 export const onRequest = (context) => {
-  return new Response({
-    msg: 'test'
-  })
+  return new Response('hello world')
 }
