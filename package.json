@@ -1,22 +1,27 @@
 {
-  "name": "xiaofuyesnew.github.io",
+  "name": "allen-wong",
   "version": "1.0.0",
-  "description": "",
+  "description": "Allen Wong's Blog",
   "type": "module",
-  "main": "index.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Allen Wong<xiaofuyesnew@hotmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "@antfu/eslint-config": "1.0.0-beta.29",
+    "@vitejs/plugin-vue": "^4.4.0",
     "eslint": "^8.52.0",
-    "vite": "^4.5.0"
+    "vite": "^4.5.0",
+    "vite-plugin-mkcert": "^1.16.0"
   },
   "dependencies": {
+    "@vueuse/core": "^10.5.0",
     "pinia": "^2.1.7",
     "vue": "^3.3.7",
     "vue-router": "^4.2.5"
