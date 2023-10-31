@@ -34,6 +34,7 @@ export default defineConfig(({ mode }) => {
         filepath: resolve(root, '.eslintrc-auto-import.json'),
         globalsPropValue: true,
       },
+      dts: false,
     }),
     Components({
       dts: false,
