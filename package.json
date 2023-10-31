@@ -1,8 +1,11 @@
 {
   "name": "allen-wong",
+  "type": "module",
   "version": "1.0.0",
   "description": "Allen Wong's Blog",
-  "type": "module",
+  "author": "Allen Wong<xiaofuyesnew@hotmail.com>",
+  "license": "MIT",
+  "keywords": [],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,20 +13,23 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "keywords": [],
-  "author": "Allen Wong<xiaofuyesnew@hotmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@antfu/eslint-config": "1.0.0-beta.29",
-    "@vitejs/plugin-vue": "^4.4.0",
-    "eslint": "^8.52.0",
-    "vite": "^4.5.0",
-    "vite-plugin-mkcert": "^1.16.0"
-  },
   "dependencies": {
     "@vueuse/core": "^10.5.0",
     "pinia": "^2.1.7",
     "vue": "^3.3.7",
     "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "1.0.0-beta.29",
+    "@iconify/json": "^2.2.135",
+    "@vitejs/plugin-vue": "^4.4.0",
+    "eslint": "^8.52.0",
+    "unocss": "^0.57.1",
+    "unplugin-auto-import": "^0.16.7",
+    "unplugin-imagemin": "^0.5.13",
+    "unplugin-vue-components": "^0.25.2",
+    "vite": "^4.5.0",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-mkcert": "^1.16.0"
   }
 }
