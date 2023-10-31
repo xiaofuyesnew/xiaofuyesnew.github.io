@@ -62,7 +62,7 @@
         target="_blank"
         title="Rust"
       >
-        <span class="text-[1.2em] text-[#ffc832]" i-logos:rust />
+        <span class="text-[1.2em] text-[#9a5217]" i-logos:rust />
       </a>
       <a
         class="!border-0"
@@ -73,7 +73,7 @@
         <span class="text-[1.2em] color-icon" i-logos:tauri />
       </a>
     </p>
-    <p class="mb-5">
+    <p>
       MAY use <span
         class="text-[#3178C6]"
         i-simple-icons:typescript
@@ -81,6 +81,9 @@
         class="text-[#F7DF1E]"
         i-simple-icons:javascript
       /> advocate.
+    </p>
+    <p class="mb-5">
+      <a href="https://phaser.io/" target="_blank">Phaser.js</a> for game development.
     </p>
     <p>
       Creator of <a
