@@ -4,6 +4,8 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import 'uno.css'
 
+import Progress from './components/Progress.vue'
+
 /** @type {import('vitepress').Theme} */
 export default {
   extends: DefaultTheme,
@@ -12,9 +14,10 @@ export default {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     })
   },
-  enhanceApp() {
+  enhanceApp({ app }) {
     // app,
     // router,
     // siteData
+    app.component('Progress', Progress)
   },
 }

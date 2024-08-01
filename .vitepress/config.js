@@ -28,29 +28,42 @@ export default defineConfig({
       { text: '博客', link: '/blog', activeMatch: '/blog/' },
       { text: '关于我', link: '/about', activeMatch: '/about' },
     ],
-    sidebar: [
-      {
-        text: '先读我',
-        items: [
-          { text: '写在前面', link: '/blog/read_first' },
-        ],
-      },
-      {
-        text: '博客',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
-        ],
-      },
-      {
-        text: '教程',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
-        ],
-      },
-    ],
-
+    sidebar: {
+      '/blog/': [
+        {
+          text: '先读我',
+          items: [
+            { text: '写在前面', link: '/blog/read_first' },
+          ],
+        },
+        {
+          text: '2024',
+          items: [
+            {
+              text: '年度目标',
+              link: '/blog/2024/',
+            },
+          ],
+        },
+      ],
+      '/tutorial/': [
+        {
+          text: '教程',
+          items: [
+            {
+              text: 'Phaser.js 游戏开发',
+              link: '/tutorial/phaserjs_game_dev',
+              items: [
+                {
+                  text: '0.从零开始',
+                  link: '/tutorial/phaserjs_game_dev/000_start',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
     socialLinks: [
       // github
       { icon: 'github', link: 'https://github.com/xiaofuyesnew' },
