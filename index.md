@@ -2,29 +2,40 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
-# hero:
-#   name: "Allen Wong"
-#   text: "Allen Wong's Blog"
-#   tagline: My great project tagline
-#   actions:
-#     - theme: brand
-#       text: Markdown Examples
-#       link: /markdown-examples
-#     - theme: alt
-#       text: API Examples
-#       link: /api-examples
+hero:
+  name: "Allen's Code Corner"
+  text: "Coding the Magic\nSharing the Fun"
+  # tagline: My great project tagline
+  actions:
+    - theme: brand
+      text: 教程
+      link: /tutorial
+    - theme: alt
+      text: 博客
+      link: /blog
+  image:
+    src: /images/avatar.png
+    alt: avatar
 
-# features:
-#   - title: Feature A
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#   - title: Feature B
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#   - title: Feature C
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+features:
+  - icon: 💻
+    title: Frontend
+    details: Better Vue than React, bundler with vite.
+  - icon: 🧑‍💻
+    title: Backend
+    details: Koa MVC, Prisma ORM, MySQL & MongoDB.
+  - icon: 🎮
+    title: Game Dev
+    details: Phaser.js of course, but also Cocos Creator.
 ---
-
+<!--
 <script setup>
-  import Home from '@/components/Home.vue'
+  import Home from './components/Home.vue'
 </script>
 
-<home />
+<Home /> -->
+<style lang="scss" scope>
+  .VPImage {
+    border-radius: 50%;
+  }
+</style>
