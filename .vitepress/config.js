@@ -1,10 +1,12 @@
+import { resolve } from 'node:path'
+import { cwd } from 'node:process'
 import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Allen’s Code Corner',
-  description: '黄艾伦的技术小窝',
+  description: 'Allen’s Code Corner',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
@@ -12,7 +14,7 @@ export default defineConfig({
     plugins: [Unocss()],
     resolve: {
       alias: {
-        '@': '/',
+        '@': resolve(cwd()),
       },
     },
   },
@@ -26,29 +28,33 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '教程', link: '/tutorial', activeMatch: '/tutorial/' },
       { text: '博客', link: '/blog', activeMatch: '/blog/' },
-      { text: '关于我', link: '/about', activeMatch: '/about' },
+      { text: '关于我', link: '/about', activeMatch: '/about/' },
     ],
     sidebar: {
       '/blog/': [
         {
-          text: '先读我',
-          items: [
-            { text: '写在前面', link: '/blog/read_first' },
-          ],
+          text: '写在前面',
+          link: '/blog/',
         },
         {
           text: '2024',
+          link: '/blog/2024/',
           items: [
             {
-              text: '年度目标',
-              link: '/blog/2024/',
+              text: 'August',
+              items: [],
             },
           ],
+        },
+        {
+          text: 'Before',
+          items: [],
         },
       ],
       '/tutorial/': [
         {
           text: '教程',
+          link: '/tutorial/',
           items: [
             {
               text: 'Phaser.js 游戏开发',
@@ -60,6 +66,16 @@ export default defineConfig({
                 },
               ],
             },
+            {
+              text: '从零搭建后台管理',
+              link: '/tutorial/admin_from_scratch',
+              items: [
+                {
+                  text: '0.从零开始',
+                  link: '/tutorial/admin_from_scratch/000_start',
+                },
+              ],
+            },
           ],
         },
       ],
@@ -67,6 +83,13 @@ export default defineConfig({
     socialLinks: [
       // github
       { icon: 'github', link: 'https://github.com/xiaofuyesnew' },
+      // juejin
+      {
+        icon: {
+          svg: '<svg t="1722443882250" class="icon" viewBox="0 0 1212 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4211" width="200" height="200"><path d="M698.29709823 161.95344498L597.85455501 82.75836245l-104.9189194 82.75165526-5.4575013 4.38439708 110.3764207 87.99453639 110.74434276-87.99453639-10.30179954-7.94096981z m380.6453521 307.15305187l-481.36383602 379.5722479-481.05723562-379.35762774L45.45122758 526.41025479l552.12738673 435.34300046 552.43398714-435.58828146-71.07015112-57.05847694z m-481.36383602 30.78275641l-261.96003953-206.52654705-71.03949028 57.05847694 332.96887012 262.57324259 333.30613134-262.81852359-71.03949141-57.05847694-262.23598024 206.77182805z" p-id="4212"></path></svg>',
+        },
+        link: 'https://juejin.cn/user/2928754705564184',
+      },
       // bilibili
       {
         icon: {
@@ -75,14 +98,7 @@ export default defineConfig({
         link: 'https://space.bilibili.com/747089',
       },
       // youtube
-      { icon: 'youtube', link: 'https://www.youtube.com/channel/UCe-LRPFs6Atx7Z5hcp1K2nQ' },
-      // juejin
-      {
-        icon: {
-          svg: '<svg t="1722443882250" class="icon" viewBox="0 0 1212 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4211" width="200" height="200"><path d="M698.29709823 161.95344498L597.85455501 82.75836245l-104.9189194 82.75165526-5.4575013 4.38439708 110.3764207 87.99453639 110.74434276-87.99453639-10.30179954-7.94096981z m380.6453521 307.15305187l-481.36383602 379.5722479-481.05723562-379.35762774L45.45122758 526.41025479l552.12738673 435.34300046 552.43398714-435.58828146-71.07015112-57.05847694z m-481.36383602 30.78275641l-261.96003953-206.52654705-71.03949028 57.05847694 332.96887012 262.57324259 333.30613134-262.81852359-71.03949141-57.05847694-262.23598024 206.77182805z" p-id="4212"></path></svg>',
-        },
-        link: 'https://juejin.cn/user/2928754705564184',
-      },
+      { icon: 'youtube', link: 'https://www.youtube.com/@xiaofuyesnew' },
       // twitter
       { icon: 'twitter', link: 'https://twitter.com/xiaofuyesnew' },
       {
