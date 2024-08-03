@@ -9,6 +9,11 @@ export default defineConfig({
   description: 'Allen’s Code Corner',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['script', {
+      async: true,
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9606899126268202',
+      crossorigin: 'anonymous',
+    }],
   ],
   vite: {
     plugins: [Unocss()],
