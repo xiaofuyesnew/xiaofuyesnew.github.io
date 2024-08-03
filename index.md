@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Allen's Code Corner"
-  text: "Coding the Magic\nSharing the Fun"
+  text: "Coding as Magic\nSharing with Fun"
   # tagline: My great project tagline
   actions:
     - theme: brand
@@ -20,20 +20,14 @@ hero:
 features:
   - icon: 💻
     title: Frontend
-    details: Better Vue than React, bundler with vite.
+    details: Better Vue than React, bundler with Vite.
   - icon: 🧑‍💻
     title: Backend
-    details: Koa MVC, Prisma ORM, MySQL & MongoDB.
+    details: Koa MVC, Prisma ORM, MySQL or MongoDB.
   - icon: 🎮
     title: Game Dev
     details: Phaser.js of course, but also Cocos Creator.
 ---
-<!--
-<script setup>
-  import Home from './components/Home.vue'
-</script>
-
-<Home /> -->
 <style lang="scss" scope>
   .VPImage {
     border-radius: 50%;

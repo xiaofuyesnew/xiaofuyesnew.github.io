@@ -2,4 +2,8 @@
 layout: home
 ---
 
-# 关于我
+<script setup>
+  import About from '@/components/About.vue'
+</script>
+
+<About />
