@@ -28,6 +28,13 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '教程', link: '/tutorial', activeMatch: '/tutorial/' },
       { text: '博客', link: '/blog', activeMatch: '/blog/' },
+      {
+        text: '工具',
+        items: [
+          { text: 'baidu', link: 'https://www.baidu.com' },
+        ],
+      },
+      { text: 'Github City', link: '/github-city', activeMatch: '/github-city' },
       { text: '关于我', link: '/about', activeMatch: '/about/' },
     ],
     sidebar: {
@@ -42,7 +49,12 @@ export default defineConfig({
           items: [
             {
               text: 'August',
-              items: [],
+              items: [
+                {
+                  text: '推荐一个文字转语音工具',
+                  link: '/blog/2024/08/luvvoice',
+                },
+              ],
             },
           ],
         },
