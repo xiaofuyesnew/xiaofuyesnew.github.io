@@ -2,7 +2,7 @@ import { resolve } from 'node:path'
 import { cwd } from 'node:process'
 import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
-import { htmlScripts } from './scripts'
+import ads from './ads'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -10,34 +10,7 @@ export default defineConfig({
   description: 'Allen’s Code Corner',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    [
-      'script',
-      {
-        async: true,
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9606899126268202',
-        crossorigin: 'anonymous',
-      },
-    ],
-    [
-      'script',
-      {
-        async: true,
-        src: 'https://fundingchoicesmessages.google.com/i/pub-9606899126268202?ers=1',
-        nonce: 'c5Q5kNFbsxbVcdXgriuGGQ',
-      },
-    ],
-    [
-      'script',
-      {
-        nonce: 'c5Q5kNFbsxbVcdXgriuGGQ',
-      },
-      `(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();`,
-    ],
-    [
-      'script',
-      {},
-      htmlScripts,
-    ],
+    ...ads,
   ],
   vite: {
     plugins: [Unocss()],
@@ -59,9 +32,10 @@ export default defineConfig({
       { text: '博客', link: '/blog', activeMatch: '/blog/' },
       {
         text: '工具',
-        items: [
-          { text: 'baidu', link: 'https://www.baidu.com' },
-        ],
+        link: 'javascript:;',
+        // items: [
+        //   { text: 'baidu', link: 'https://www.baidu.com' },
+        // ],
       },
       { text: 'Github City', link: '/github-city', activeMatch: '/github-city' },
       { text: '关于我', link: '/about', activeMatch: '/about/' },
