@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Allen's Code Corner"
-  text: "Coding as Magic\nSharing with Fun"
+  text: "Code as Magic\nShare with Fun"
   # tagline: My great project tagline
   actions:
     - theme: brand
