@@ -68,8 +68,8 @@
       </a>
       to encourage me to work more and better. Thanks a lot!🫰
     </p>
-    <p title="我目前正待业，如果您正在寻找一名远程前端开发，我也许就是您要找的人。虽然年事已高，但依然可靠。">
-      I'm currently <span font="bold">UNEMPLOYED</span>, so if you're looking for a <span font="bold">Remote Frontend Developer</span>, I might be that guy. Old but reliable.
+    <p title="如果您正在寻找一名远程前端开发，我也许就是您要找的人。虽然年事已高，但依然可靠。">
+      If you're looking for a <span font="bold">Remote Frontend Developer</span>, I might be that guy. OLD but RELIABLE.
     </p>
   </section>
 </template>
