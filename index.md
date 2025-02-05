@@ -23,7 +23,7 @@ features:
     details: Better Vue than React, bundler with Vite.
   - icon: 🧑‍💻
     title: Backend
-    details: Koa MVC, Prisma ORM, MySQL or MongoDB.
+    details: Koa MVC, Sequelize ORM, MySQL or MongoDB.
   - icon: 🎮
     title: Game Dev
     details: Phaser.js of course, but also Cocos Creator.
