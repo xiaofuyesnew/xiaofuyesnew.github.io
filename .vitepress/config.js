@@ -23,7 +23,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     footer: {
-      message: 'Released under the GPL License.',
+      message: 'Released under the MIT License.',
       copyright: 'Copyright © 2024-present Allen Huang',
     },
     nav: [
