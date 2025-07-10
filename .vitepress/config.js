@@ -38,6 +38,7 @@ export default defineConfig({
         // ],
       },
       { text: 'Github City', link: '/github-city', activeMatch: '/github-city' },
+      { text: '🍚要饭', link: '/yaofan', activeMatch: '/yaofan/' },
       { text: '关于我', link: '/about', activeMatch: '/about/' },
     ],
     sidebar: {
