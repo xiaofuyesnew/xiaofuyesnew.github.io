@@ -148,7 +148,7 @@ function loadImages() {
     bowlImage.value = bowlImg
     onImageLoad()
   }
-  bowlImg.src = '/assets/images/bowl.png'
+  bowlImg.src = '/images/bowl.png'
 
   // 加载硬币手的图片
   const coinHandImg = new Image()
@@ -156,7 +156,7 @@ function loadImages() {
     coinHandImage.value = coinHandImg
     onImageLoad()
   }
-  coinHandImg.src = '/assets/images/coin_hand.png'
+  coinHandImg.src = '/images/coin_hand.png'
 }
 
 function initCanvas() {
